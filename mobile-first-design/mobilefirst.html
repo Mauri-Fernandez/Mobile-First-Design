@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mobilefirst.css">
+    <title>Mobile First</title>
+</head>
+
+<body>
+    <section class="main">
+        <h1>Mobile First Design</h1>
+        <div class="container">
+            <h2 id="width"></h2>
+        </div>
+        <div class="container">
+            <h3 class="mobile-h3">min-width: 360px</h3>
+            <div class="min-width480">
+                <h3>min-width: 480px</h3>
+            </div>
+            
+            <div class="min-width767">
+                <h3>min-width: 767px</h3>
+            </div>
+
+            <div class="min-width1024">
+                <h3>min-width: 1024px</h3>
+            </div>
+            <div class="min-width1240">
+                <h3>min-width: 1240px</h3>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        var initialWidth = screen.width;
+        document.getElementById("width").innerHTML = 'width: ' + initialWidth + 'px';
+        window.onresize = function() {
+            var width = window.innerWidth;
+            document.getElementById("width").innerHTML = 'width: ' + width + 'px';
+        };
+    </script>
+</body>
+
+</html>
